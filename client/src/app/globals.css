@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --animate-blink: blink 1s steps(1) infinite;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Blinking cursor for streaming */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Custom scrollbar for messages */
+#messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+#messages-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#messages-container::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 3px;
+}
+
+#messages-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+/* Smooth textarea resize */
+textarea {
+  min-height: 40px;
+  max-height: 120px;
+}
