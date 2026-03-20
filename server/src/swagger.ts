@@ -7,7 +7,6 @@ export async function bootstrapSwagger(app: INestApplication) {
     credentials: true,
   });
 
-  // Configuración de Swagger
   const config = new DocumentBuilder()
     .setTitle('Chat API')
     .setDescription('The Department Assistant Chat API documentation')
