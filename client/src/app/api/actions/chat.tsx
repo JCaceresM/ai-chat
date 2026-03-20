@@ -12,7 +12,7 @@ export async function getHistory(sessionId?: string): Promise<ChatMessage[]> {
         return [];
     }
     const client = new ApiClient(API_URL);
-    const data = await client.request<{ turns: Turn[] }>(`/chat/${sessionId}/history`, {
+    const data = await client.request<{ turns: Turn[] }>(`/api/v1/chat/${sessionId}/history`, {
         method: 'GET',
         cache: 'no-store',
     });

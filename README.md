@@ -20,8 +20,8 @@ Browser
 
 - Client: `http://localhost:3001`
 - Server: `http://localhost:3000`
-- Swagger: `http://localhost:3000/docs/swagger`
-- Health: `http://localhost:3000/health`
+- Swagger: `http://localhost:3000/api/v1/docs/swagger`
+- Health: `http://localhost:3000/api/v1/health`
 
 ## Docker Quickstart
 

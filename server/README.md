@@ -45,16 +45,16 @@ The API will be available at `http://localhost:3000`.
 ## URLs
 
 - API base: `http://localhost:3000`
-- Swagger: `http://localhost:3000/docs/swagger`
-- Health: `http://localhost:3000/health`
+- Swagger: `http://localhost:3000/api/v1/docs/swagger`
+- Health: `http://localhost:3000/api/v1/health`
 
 ## API Endpoints
 
-- `POST /chat/session`
-- `POST /chat/:sessionId/message`
-- `GET /chat/:sessionId/history`
-- `DELETE /chat/:sessionId`
-- `GET /health`
+- `POST /api/v1/chat/session`
+- `POST /api/v1/chat/:sessionId/message`
+- `GET /api/v1/chat/:sessionId/history`
+- `DELETE /api/v1/chat/:sessionId`
+- `GET /api/v1/health`
 
 ## Available Scripts
 

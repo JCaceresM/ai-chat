@@ -108,7 +108,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   try {
     const client = new ApiClient(API_URL);
     const nestRes = await client.requestRaw(
-      `/chat/${sessionId}/message`,
+      `/api/v1/chat/${sessionId}/message`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

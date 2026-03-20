@@ -16,7 +16,7 @@ export async function bootstrapSwagger(app: INestApplication) {
     .addTag('health')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs/swagger', app, document);
+  SwaggerModule.setup('api/v1/docs/swagger', app, document);
 
 }
 

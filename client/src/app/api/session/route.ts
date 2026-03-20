@@ -7,7 +7,7 @@ const API_URL = process.env['API_URL'] ?? '';
 export async function POST(): Promise<NextResponse> {
   try {
     const client = new ApiClient(API_URL);
-    const data = await client.request<{ sessionId: string }>('/chat/session', {
+    const data = await client.request<{ sessionId: string }>('/api/v1/chat/session', {
       method: 'POST',
     });
 
@@ -38,7 +38,7 @@ export async function DELETE(): Promise<NextResponse> {
   if (sessionId) {
     try {
       const client = new ApiClient(API_URL);
-      await client.request(`/chat/${sessionId}`, {
+      await client.request(`/api/v1/chat/${sessionId}`, {
         method: 'DELETE',
       });
     } catch {
